@@ -1,9 +1,26 @@
 # Score Keeper
 
-One Paragraph of the project description
+Creates a score keeping app using the Android Studio project. It is based on following aspects:
+- An appropriate layout
+- Two team names (TextView)
+- Two scores (TextView)
+- Buttons to increase and decrease the scores
+  * Two Buttons with a way to determine which team is currently scoring (Switch or ToggleButton)
+  * An amount to change the score by (RadioButtons or Spinner)
+
+- There must be at least two scoring options
+- The scores can be any values you choose. Here is some inspiration but feel free to use your own scores:
+  * American Football: 1, 2, 3, 6
+  * Basketball: 1, 2, 3
+  * Freestyle Wrestling: 1, 2, 3, 4, 5
+  * Cricket: 1, 2, 3, 4, 6
+  * Your own game that you make up your own scores; 1, 50, 99
+  * Anything else you feel will be important to include
+
+- For this lab the buttons do not need to do anything. This is only a layout
 
 Initially appeared on
-[gist](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2). But the page cannot open anymore so that is why I have moved it here.
+[gist](https://github.com/Cambrian-ITCAMD/ScoreKeeper_Karam.git).
 
 ## Getting Started
 
@@ -62,8 +79,9 @@ Add additional notes to deploy this on a live system
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code
-of conduct, and the process for submitting pull requests to us.
+Group Work by: 
+* Rishabh Bhutani
+* Karam Singh
 
 ## Versioning
 
@@ -73,12 +91,7 @@ repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
 
 ## Authors
 
-- **Billie Thompson** - *Provided README Template* -
-  [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of
-[contributors](https://github.com/PurpleBooth/a-good-readme-template/contributors)
-who participated in this project.
+** Rishabh and Karam under the guidance and instruction of the Professor David.
 
 ## License
 
@@ -88,6 +101,9 @@ details
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code is used
-- Inspiration
-- etc
+- Professor David
+- Team Mate 
+
+## Submitted By:
+* Karam Singh
+* Rishabh Bhutani

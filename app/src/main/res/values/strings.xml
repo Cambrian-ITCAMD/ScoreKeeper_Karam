@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">ScoreKeeper_Karam</string>
+    <string name="Score_Keeper">Match Score</string>
+    <string name="Team_A">Dead Warriors</string>
+    <string name="Team_B">Demon: The Devil</string>
+    <string name="Score_A">5</string>
+    <string name="Score_B">4</string>
+    <string name="Add">+</string>
+    <string name="Subtract">-</string>
+    <string name="A_3Pointer">3</string>
+    <string name="B_3Pointer">3</string>
+    <string name="A_5Pointer">5</string>
+    <string name="B_5Pointer">5</string>
+    <string name="A_10Pointer">10</string>
+    <string name="B_10Pointer">10</string>
 </resources>
