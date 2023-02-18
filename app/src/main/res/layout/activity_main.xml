@@ -106,14 +106,14 @@
     <!-- 6 Radio buttons with 3 score options for each Team in horizontal linear layout -->
     <LinearLayout
         android:id="@+id/linearlayout5"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <!-- Three Radio buttons of score options for Team A in vertical linear layout -->
         <LinearLayout
             android:id="@+id/linearlayout6"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -149,13 +149,13 @@
         <!-- 3 Radio buttons with score options for Team B in vertical linear layout -->
         <LinearLayout
             android:id="@+id/linearLayout7"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <!-- Radio group for radio buttons of Team B that has checked button as radioButton4 -->
             <RadioGroup
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:checkedButton="@id/radioButton4">
 
@@ -189,7 +189,8 @@
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_height="48dp"
-        android:text="Switch" />
+        android:text="@string/Switch"
+        android:checked="true"/>
 
     <!-- Common Score Increase and decrease buttons for the both Teams that can be switched between teams using switch button  -->
     <LinearLayout
@@ -202,9 +203,11 @@
         <Button
             android:id="@+id/inc_button"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
             android:layout_weight="1"
-            android:text="@string/Add" />
+            android:text="@string/Add"
+            android:clickable="true"/>
 
         <!-- Add extra space between two button in horizontal linear layout -->
         <Space
@@ -215,9 +218,11 @@
         <Button
             android:id="@+id/dec_button"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
             android:layout_weight="1"
-            android:text="@string/Subtract" />
+            android:text="@string/Subtract"
+            android:clickable="true"/>
     </LinearLayout>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
