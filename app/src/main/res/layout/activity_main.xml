@@ -35,7 +35,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:textColor="@color/white"
             android:text="@string/Team_A" />
 
         <!-- Team B named as "Demon: The Devil"-->
@@ -44,7 +43,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/white"
             android:gravity="center"
             android:text="@string/Team_B" />
     </LinearLayout>
