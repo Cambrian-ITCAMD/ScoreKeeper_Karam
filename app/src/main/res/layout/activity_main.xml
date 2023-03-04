@@ -12,6 +12,7 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:textSize="30sp"
         android:text="@string/Score_Keeper"
         android:gravity="center"
         android:textColor="@color/black"
@@ -29,19 +30,23 @@
         android:orientation="horizontal">
 
         <!-- Text view for Team A (Dead Warriors)-->
-        <TextView
+
+        <!-- Team B named as "Demon: The Devil"-->
+        <EditText
             android:id="@+id/teamA"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:autofillHints="@string/Team_A"
+            android:layout_width="149dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
             android:gravity="center"
             android:text="@string/Team_A" />
 
-        <!-- Team B named as "Demon: The Devil"-->
-        <TextView
+        <EditText
             android:id="@+id/teamB"
+            android:inputType="text"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_weight="1"
             android:gravity="center"
             android:text="@string/Team_B" />
@@ -85,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/Score_A" />
+            android:text="@string/Score_A"/>
 
         <!-- Score button for Team B -->
         <Button
@@ -107,34 +112,34 @@
         <!-- Three Radio buttons of score options for Team A in vertical linear layout -->
         <LinearLayout
             android:id="@+id/linearlayout6"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <!-- Radio group for radio buttons of Team A that has checked button as radioButton2 -->
             <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:checkedButton="@id/radioButton2">
 
                 <!-- Radio button with option of 3 score/points Team A -->
                 <RadioButton
                     android:id="@+id/radioButton1"
-                    android:layout_width="189dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:text="@string/A_3Pointer" />
 
                 <!-- Radio button with option of 5 score/points Team A -->
                 <RadioButton
                     android:id="@+id/radioButton2"
-                    android:layout_width="189dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/A_5Pointer" />
 
                 <!-- Radio button with option of 10 score/points Team A -->
                 <RadioButton
                     android:id="@+id/radioButton3"
-                    android:layout_width="189dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/A_10Pointer" />
             </RadioGroup>
@@ -143,34 +148,34 @@
         <!-- 3 Radio buttons with score options for Team B in vertical linear layout -->
         <LinearLayout
             android:id="@+id/linearLayout7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="205dp"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <!-- Radio group for radio buttons of Team B that has checked button as radioButton4 -->
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:checkedButton="@id/radioButton4">
 
                 <!-- Radio button with option of 3 score/points Team B -->
                 <RadioButton
                     android:id="@+id/radioButton4"
-                    android:layout_width="189dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/B_3Pointer" />
 
                 <!-- Radio button with option of 5 score/points Team B -->
                 <RadioButton
                     android:id="@+id/radioButton5"
-                    android:layout_width="189dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/B_5Pointer" />
 
                 <!-- Radio button with option of 10 score/points for Team B -->
                 <RadioButton
                     android:id="@+id/radioButton6"
-                    android:layout_width="189dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/B_10Pointer" />
             </RadioGroup>
@@ -198,7 +203,7 @@
             android:id="@+id/inc_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:layout_weight="1"
             android:text="@string/Add"
             android:clickable="true"/>
@@ -213,7 +218,7 @@
             android:id="@+id/dec_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:layout_weight="1"
             android:text="@string/Subtract"
             android:clickable="true"/>
