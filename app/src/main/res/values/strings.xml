@@ -3,8 +3,8 @@
     <string name="Score_Keeper">Score Keeper</string>
     <string name="Team_A">Dead Warriors</string>
     <string name="Team_B">Demon: The Devil</string>
-    <string name="Score_A">5</string>
-    <string name="Score_B">3</string>
+    <string name="Score_A">0</string>
+    <string name="Score_B">0</string>
     <string name="Add">+</string>
     <string name="Subtract">-</string>
     <string name="A_3Pointer">3</string>
