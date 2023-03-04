@@ -103,7 +103,6 @@
             android:gravity="center"
             android:layout_weight="1"
             android:text="@string/Score_B" />
-
     </LinearLayout>
 
     <!-- 6 Radio buttons with 3 score options for each Team in horizontal linear layout -->
@@ -113,10 +112,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+        <Space
+            android:layout_width="140dp"
+            android:layout_height="match_parent"/>
+
         <!-- Three Radio buttons of score options for Team A in vertical linear layout -->
         <LinearLayout
             android:id="@+id/linearlayout6"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -124,8 +127,14 @@
             <RadioGroup
                 android:id="@+id/rg1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:checkedButton="@id/radioButton2">
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/radioButton0"
+                    android:layout_width="match_parent"
+                    android:checked="true"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Zero" />
 
                 <!-- Radio button with option of 3 score/points Team A -->
                 <RadioButton
@@ -147,42 +156,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/A_10Pointer" />
-            </RadioGroup>
-        </LinearLayout>
-
-        <!-- 3 Radio buttons with score options for Team B in vertical linear layout -->
-        <LinearLayout
-            android:id="@+id/linearLayout7"
-            android:layout_width="205dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <!-- Radio group for radio buttons of Team B that has checked button as radioButton4 -->
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:checkedButton="@id/radioButton4">
-
-                <!-- Radio button with option of 3 score/points Team B -->
-                <RadioButton
-                    android:id="@+id/radioButton4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/B_3Pointer" />
-
-                <!-- Radio button with option of 5 score/points Team B -->
-                <RadioButton
-                    android:id="@+id/radioButton5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/B_5Pointer" />
-
-                <!-- Radio button with option of 10 score/points for Team B -->
-                <RadioButton
-                    android:id="@+id/radioButton6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/B_10Pointer" />
             </RadioGroup>
         </LinearLayout>
     </LinearLayout>
