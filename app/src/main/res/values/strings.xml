@@ -8,11 +8,8 @@
     <string name="Add">+</string>
     <string name="Subtract">-</string>
     <string name="A_3Pointer">3</string>
-    <string name="B_3Pointer">3</string>
     <string name="A_5Pointer">5</string>
-    <string name="B_5Pointer">5</string>
     <string name="A_10Pointer">10</string>
-    <string name="B_10Pointer">10</string>
     <string name="Switch">Switch To \"Demon: The Devil\"</string>
     <string name="Zero">No Radio Pointer</string>
 </resources>
