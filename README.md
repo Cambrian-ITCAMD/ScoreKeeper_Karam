@@ -2,96 +2,34 @@
 
 Creates a score keeping app using the Android Studio project. It is based on following aspects:
 - An appropriate layout
-- Two team names (TextView)
-- Two scores (TextView)
+- Two team names (EditText)
+- Two scores (EditText)
 - Buttons to increase and decrease the scores
   * Two Buttons with a way to determine which team is currently scoring (Switch or ToggleButton)
   * An amount to change the score by (RadioButtons or Spinner)
 
-- There must be at least two scoring options
-- The scores can be any values you choose. Here is some inspiration but feel free to use your own scores:
-  * American Football: 1, 2, 3, 6
-  * Basketball: 1, 2, 3
-  * Freestyle Wrestling: 1, 2, 3, 4, 5
-  * Cricket: 1, 2, 3, 4, 6
-  * Your own game that you make up your own scores; 1, 50, 99
-  * Anything else you feel will be important to include
+- There are two scoring options
+  * Radio buttons
+  * Increase and decrease buttons
 
-- For this lab the buttons do not need to do anything. This is only a layout
+- The scores can only presented or gained in following ways:
+  * Score can not be negative/minimum score that a team can hold is 'zero'
+  * Maximum score allowed is 100.
+  * Switch between Teams using the 'Switch' button and increase or decrease scores based on selected option through switch.
+  * If radio button is selected and increase or decrease button is pressed, scores will increase or decrease based on the radio button option is selected.
+  * If no radio button option is selected, scores can still be increase or decreased using default value 1 by pressing increase or decrease button.
 
 Initially appeared on
 [gist](https://github.com/Cambrian-ITCAMD/ScoreKeeper_Karam.git).
 
 ## Getting Started
 
-These instructions will give you a copy of the project up and running on
-your local machine for development and testing purposes. See deployment
-for notes on deploying the project on a live system.
-
-### Prerequisites
-
-Requirements for the software and other tools to build, test and push
-- [Example 1](https://www.example.com)
-- [Example 2](https://www.example.com)
-
-### Installing
-
-A step by step series of examples that tell you how to get a development
-environment running
-
-Say what the step will be
-
-    Give the example
-
-And repeat
-
-    until finished
-
-End with an example of getting some data out of the system or using it
-for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Sample Tests
-
-Explain what these tests test and why
-
-    Give an example
-
-### Style test
-
-Checks if the best practices and the right coding style has been used.
-
-    Give an example
-
-## Deployment
-
-Add additional notes to deploy this on a live system
+Read the above description in Score Keeper to get an idea how it works.
 
 ## Built With
 
-- [Contributor Covenant](https://www.contributor-covenant.org/) - Used
-  for the Code of Conduct
-- [Creative Commons](https://creativecommons.org/) - Used to choose
-  the license
-
-## Contributing
-
-Group Work by: 
-* Rishabh Bhutani
-* Karam Singh
-
-## Versioning
-
-We use [Semantic Versioning](http://semver.org/) for versioning. For the versions
-available, see the [tags on this
-repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
-
-## Authors
-
-** Rishabh and Karam under the guidance and instruction of the Professor David.
+-Kotlin compiler
+-Android Studio
 
 ## License
 
@@ -102,7 +40,26 @@ details
 ## Acknowledgments
 
 - Professor David
-- Team Mate 
+- Rishabh Bhutani 
+- ChatGpt
+
+## Contribution
+  Karam Singh:
+    * Created Initial layout
+    * Worked on giving functionality to the switch button, radio buttons, EditText, and TextView
+    * Tried best to add binding functionality and make proper use of find by Id methods.
+    * Implemented logic for increasing and decreasing points.
+    * Handled exceptions for the maximum and minimum score. 
+    * Initial commit of code on github.
+    * Added all update in the code to the github in proper way.
+
+  Rishabh Bhutani:
+    * Worked on giving functionality to the increase and decrease button.
+    * Added comments/documentation in the code.
+    * Made adjustments in the layout.
+    * Helped in resolving some find by Id issues while giving functionality to all buttons.
+    * Helped in making proper use of data fields, accessors, and mutators.
+    * Maintained code and tested every aspect to remove all minor issues and bugs
 
 ## Submitted By:
 * Karam Singh
