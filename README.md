@@ -28,8 +28,8 @@ Read the above description in Score Keeper to get an idea how it works.
 
 ## Built With
 
--Kotlin compiler
--Android Studio
+- Kotlin compiler
+- Android Studio
 
 ## License
 
@@ -44,7 +44,7 @@ details
 - ChatGpt
 
 ## Contribution
-  Karam Singh:
+- Karam Singh:
     * Created Initial layout
     * Worked on giving functionality to the switch button, radio buttons, EditText, and TextView
     * Tried best to add binding functionality and make proper use of find by Id methods.
@@ -53,7 +53,7 @@ details
     * Initial commit of code on github.
     * Added all update in the code to the github in proper way.
 
-  Rishabh Bhutani:
+- Rishabh Bhutani:
     * Worked on giving functionality to the increase and decrease button.
     * Added comments/documentation in the code.
     * Made adjustments in the layout.
