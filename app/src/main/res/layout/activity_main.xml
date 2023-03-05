@@ -29,8 +29,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <!-- Text view for Team A (Dead Warriors)-->
-
         <!-- Team B named as "Demon: The Devil"-->
         <EditText
             android:id="@+id/teamA"
@@ -38,16 +36,20 @@
             android:autofillHints="@string/Team_A"
             android:layout_width="149dp"
             android:layout_height="50dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/Team_A" />
+            android:hint="@string/Team_A"
+            android:gravity="center" />
+
+        <Space
+            android:layout_width="140dp"
+            android:layout_height="match_parent"/>
 
         <EditText
             android:id="@+id/teamB"
             android:inputType="text"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_weight="1"
+            android:autofillHints="@string/Team_B"
+            android:hint="@string/Team_B"
             android:gravity="center"
             android:text="@string/Team_B" />
     </LinearLayout>
@@ -64,6 +66,7 @@
             android:id="@+id/deadWarriors"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:contentDescription="@string/Team_A_description"
             android:layout_weight="1"
             app:srcCompat="@drawable/_000_f_176136753_cau7dvgqfdbqh0d8ijxlmxa9xo7bqket" />
 
@@ -72,6 +75,7 @@
             android:id="@+id/devil"
             android:layout_width="wrap_content"
             android:layout_height="104dp"
+            android:contentDescription="@string/Team_B_description"
             android:layout_weight="1"
             app:srcCompat="@drawable/crease_demon_or_devil_110425232_shutterstock_chromaco" />
 
@@ -89,7 +93,7 @@
             android:id="@+id/scoreBoard_A"
             android:layout_width="wrap_content"
             android:gravity="center"
-            android:textSize="50dp"
+            android:textSize="50sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/Score_A"/>
@@ -99,13 +103,13 @@
             android:id="@+id/scoreBoard_B"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="50dp"
+            android:textSize="50sp"
             android:gravity="center"
             android:layout_weight="1"
             android:text="@string/Score_B" />
     </LinearLayout>
 
-    <!-- 6 Radio buttons with 3 score options for each Team in horizontal linear layout -->
+    <!-- Radio buttons with 3 score options for each Team in horizontal linear layout -->
     <LinearLayout
         android:id="@+id/linearlayout5"
         android:layout_width="match_parent"
@@ -131,7 +135,7 @@
 
                 <RadioButton
                     android:id="@+id/radioButton0"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:checked="true"
                     android:layout_height="wrap_content"
                     android:text="@string/Zero" />
@@ -139,29 +143,30 @@
                 <!-- Radio button with option of 3 score/points Team A -->
                 <RadioButton
                     android:id="@+id/radioButton1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="@string/A_3Pointer" />
 
                 <!-- Radio button with option of 5 score/points Team A -->
                 <RadioButton
                     android:id="@+id/radioButton2"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/A_5Pointer" />
 
                 <!-- Radio button with option of 10 score/points Team A -->
                 <RadioButton
                     android:id="@+id/radioButton3"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/A_10Pointer" />
             </RadioGroup>
+
         </LinearLayout>
     </LinearLayout>
 
     <!-- Choose between the Team A and Team B to add scores using addition and subtraction buttons -->
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
@@ -181,14 +186,13 @@
             android:id="@+id/inc_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
-            android:layout_weight="1"
+            android:textSize="20sp"
             android:text="@string/Add"
             android:clickable="true"/>
 
         <!-- Add extra space between two button in horizontal linear layout -->
         <Space
-            android:layout_width="30dp"
+            android:layout_width="235dp"
             android:layout_height="wrap_content"/>
 
         <!-- Score decrease button -->
@@ -197,7 +201,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="25sp"
-            android:layout_weight="1"
             android:text="@string/Subtract"
             android:clickable="true"/>
     </LinearLayout>
