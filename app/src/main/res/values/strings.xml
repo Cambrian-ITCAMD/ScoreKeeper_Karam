@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">ScoreKeeper_Karam</string>
-    <string name="Score_Keeper">Score Keeper</string>
+    <string name="Score_Keeper">Match Scores</string>
     <string name="Team_A">Dead Warriors</string>
-    <string name="Team_B">Demon: The Devil</string>
+    <string name="Team_B">The Devils</string>
     <string name="Score_A">0</string>
     <string name="Score_B">0</string>
     <string name="Add">+</string>
@@ -10,8 +10,8 @@
     <string name="A_3Pointer">3</string>
     <string name="A_5Pointer">5</string>
     <string name="A_10Pointer">10</string>
-    <string name="Switch">Switch To \"Demon: The Devil\"</string>
-    <string name="Zero">No Radio Pointer</string>
+    <string name="Switch">Switch To \"The Devils\"</string>
+    <string name="Zero">0</string>
     <string name="Team_A_description">Represents the Symbol for Team A</string>
     <string name="Team_B_description">Represents the Symbol for Team B</string>
 </resources>
