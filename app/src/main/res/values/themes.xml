@@ -14,34 +14,82 @@
         <!-- Customize your theme here. -->
         <item name="android:layout_margin">@style/mainFrame</item>
         <item name="android:textViewStyle">@style/textViewTheme</item>
+        <item name="editTextStyle">@style/editText</item>
+        <item name="android:radioButtonStyle">@style/radioStyle</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:switchStyle">@style/switchStyle</item>
     </style>
 
     <style name="mainFrame">
-        <item name="android:background">#00f</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/light_seed</item>
         <item name="elevation">100dp</item>
         <item name="android:orientation">vertical</item>
-        <item name="android:layout_margin">10dp</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="editText">
+        <item name="android:background">@color/white</item>
+        <item name="android:editTextColor">@color/black</item>
+        <item name="android:editTextStyle">@id/normal</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
 
     <style name="textViewTheme">
         <item name="android:layout_margin">10dp</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">30sp</item>
+        <item name="android:textSize">50sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="radioText">
+    <style name="radioStyle">
         <item name="android:textSize">30sp</item>
         <item name="android:textColor">@color/white</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
     </style>
 
     <style name="Button.Seed" parent="ThemeOverlay.AppCompat">
-        <item name="backgroundTint">@color/seed</item>
+        <item name="backgroundTint">@color/back_blue</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">30sp</item>
         <item name="android:layout_margin">3dp</item>
         <item name="android:gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:clickable">true</item>
     </style>
 
+    <style name="images">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">104dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="layoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="background">@color/tab_blue</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="switchStyle">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/seed</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:checked">true</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
 </resources>

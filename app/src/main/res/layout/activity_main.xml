@@ -2,63 +2,54 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    style="@style/mainFrame"
     android:orientation="vertical"
-    android:background="@color/light_seed"
+    android:background="@color/back_blue"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         style="@style/mainFrame">
 
         <!--It contains a TextView and LinearLayouts for a scorekeeper app -->
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="65dp"
             android:text="@string/Score_Keeper"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_margin="5dp"
             android:layout_height="wrap_content"
-            android:background="@color/seed"
+            android:background="@color/tab_blue"
             android:orientation="vertical">
 
             <!-- Two text views in the linear layout that represent names of two different teams-->
             <LinearLayout
                 android:id="@+id/linearLayout1"
-                android:layout_margin="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp"
+                android:layout_height="65dp"
                 android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:background="@color/white"
                 android:orientation="horizontal">
 
                 <!-- Team B named as "Demon: The Devil"-->
                 <EditText
                     android:id="@+id/teamA"
-                    android:layout_width="150dp"
-                    android:gravity="center"
-                    android:layout_height="match_parent"
+                    style="@style/editText"
                     android:autofillHints="@string/Team_A"
-                    android:hint="@string/Team_A"
-                    android:inputType="text" />
+                    android:hint="@string/Team_A" />
 
                 <Space
                     android:layout_width="40dp"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
 
                 <EditText
                     android:id="@+id/teamB"
-                    android:layout_width="150dp"
-                    android:gravity="center"
-                    android:layout_height="match_parent"
                     android:autofillHints="@string/Team_B"
                     android:hint="@string/Team_B"
-                    android:inputType="text" />
+                    style="@style/editText"/>
             </LinearLayout>
 
             <!-- Image views for two different teams in the Linear Layout -->
@@ -67,7 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/light_seed"
-                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:layout_marginHorizontal="40dp"
                 android:orientation="horizontal">
 
@@ -83,80 +74,60 @@
                 <!-- Image for Team A "Dead Warriors" -->
                 <ImageView
                     android:id="@+id/deadWarriors"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
                     android:contentDescription="@string/Team_A_description"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/deadwarriors"/>
+                    app:srcCompat="@drawable/deadwarriors"
+                    style="@style/images"/>
 
                 <!-- Image for Team B "Demon: The Devil" -->
                 <ImageView
                     android:id="@+id/devil"
-                    android:layout_width="wrap_content"
-                    android:layout_height="104dp"
                     android:contentDescription="@string/Team_B_description"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/the_devils" />
+                    app:srcCompat="@drawable/the_devils"
+                    style="@style/images"/>
 
                 <!-- Score button for Team B -->
                 <TextView
                     android:id="@+id/scoreBoard_B"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:textSize="50sp"
-                    android:gravity="center"
                     android:text="@string/Score_B" />
             </LinearLayout>
         </LinearLayout>
+
         <!-- Radio buttons with 3 score options for each Team in horizontal linear layout -->
         <LinearLayout
             android:id="@+id/linearlayout5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@color/light_seed"
-            android:orientation="vertical"
-            android:layout_gravity="center">
+            style="@style/layoutStyle">
 
             <!-- Radio group for radio buttons of Team A that has checked button as radioButton2 -->
             <RadioGroup
                 android:id="@+id/rg1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                style="@style/radioStyle"
                 android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/radioButton0"
-                    android:layout_width="wrap_content"
                     android:checked="true"
-                    android:layout_height="wrap_content"
                     android:text="@string/Zero"
-                    style="@style/radioText"/>
+                    style="@style/radioStyle"/>
 
                 <!-- Radio button with option of 3 score/points Team A -->
                 <RadioButton
                     android:id="@+id/radioButton1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="@string/A_3Pointer"
-                    style="@style/radioText"/>
+                    style="@style/radioStyle"/>
 
                 <!-- Radio button with option of 5 score/points Team A -->
                 <RadioButton
                     android:id="@+id/radioButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="@string/A_5Pointer"
-                    style="@style/radioText"/>
+                    style="@style/radioStyle"/>
 
                 <!-- Radio button with option of 10 score/points Team A -->
                 <RadioButton
                     android:id="@+id/radioButton3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="@string/A_10Pointer"
-                    style="@style/radioText"/>
+                    style="@style/radioStyle"/>
             </RadioGroup>
         </LinearLayout>
 
@@ -165,36 +136,27 @@
             android:id="@+id/linearLayout8"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
-            android:background="@color/white"
+            android:background="@color/tab_blue"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <!-- Score increase button -->
             <Button
                 android:id="@+id/inc_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/Add"
-                android:clickable="true"
                 style="@style/Button.Seed"/>
 
             <!-- Choose between the Team A and Team B to add scores using addition and subtraction buttons -->
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switch1"
-                android:layout_width="wrap_content"
-                android:layout_gravity="center"
-                android:layout_height="match_parent"
                 android:text="@string/Switch"
-                android:checked="true"/>
+                style="@style/switchStyle"/>
 
             <!-- Score decrease button -->
             <Button
                 android:id="@+id/dec_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 style="@style/Button.Seed"
-                android:text="@string/Subtract"
-                android:clickable="true"/>
+                android:text="@string/Subtract"/>
         </LinearLayout>
     </LinearLayout>
 

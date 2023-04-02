@@ -11,7 +11,7 @@
     <string name="A_5Pointer">5</string>
     <string name="A_10Pointer">10</string>
     <string name="Switch">Switch To \"The Devils\"</string>
-    <string name="Zero">0</string>
+    <string name="Zero">Off</string>
     <string name="Team_A_description">Represents the Symbol for Team A</string>
     <string name="Team_B_description">Represents the Symbol for Team B</string>
 </resources>

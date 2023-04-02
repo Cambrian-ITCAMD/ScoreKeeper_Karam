@@ -1,4 +1,4 @@
-//Submitted by: Karam Singh and Rishabh Bhutani
+
 package ca.skaram.scorekeeper
 
 import android.os.Bundle
@@ -146,7 +146,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
             //sets max points to 100
             teamBPoints = maxPoints
             Log.i("onClick", "Maximum limit Reached")
-            Toast.makeText(this@MainActivity, "Maximum limit reached", Toast.LENGTH_LONG)
+            Toast.makeText(this@MainActivity, "Maximum limit reached", Toast.LENGTH_LONG).show()
+
         }
         //if teamB points are less than zero
         else if (teamBPoints <= minPoints) {
