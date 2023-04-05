@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/mainFrame"
-    android:orientation="vertical"
-    android:background="@color/back_blue"
+    style="@style/parentLayout"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -14,36 +12,28 @@
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
+            android:layout_height="77dp"
+            android:textSize="40sp"
             android:text="@string/Score_Keeper"/>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_margin="5dp"
-            android:layout_height="wrap_content"
-            android:background="@color/tab_blue"
-            android:orientation="vertical">
+            style="@style/innerLayout">
 
             <!-- Two text views in the linear layout that represent names of two different teams-->
             <LinearLayout
                 android:id="@+id/linearLayout1"
-                android:layout_width="wrap_content"
-                android:layout_height="65dp"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
-                android:background="@color/white"
-                android:orientation="horizontal">
+                style="@style/linearLayout1">
 
                 <!-- Team B named as "Demon: The Devil"-->
                 <EditText
                     android:id="@+id/teamA"
                     style="@style/editText"
                     android:autofillHints="@string/Team_A"
-                    android:hint="@string/Team_A" />
+                    android:hint="@string/Team_A"/>
 
-                <Space
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent" />
+                <TextView
+                    style="@style/versusTab"
+                    android:text="@string/compare"/>
 
                 <EditText
                     android:id="@+id/teamB"
@@ -55,20 +45,12 @@
             <!-- Image views for two different teams in the Linear Layout -->
             <LinearLayout
                 android:id="@+id/linearLayout3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/light_seed"
-                android:layout_marginBottom="5dp"
-                android:layout_marginHorizontal="40dp"
-                android:orientation="horizontal">
+                style="@style/linearLayout3">
 
                 <!-- Score button for Team A -->
                 <TextView
                     android:id="@+id/scoreBoard_A"
-                    android:layout_width="wrap_content"
-                    android:gravity="center"
-                    android:textSize="50sp"
-                    android:layout_height="match_parent"
+                    style="@style/textViewLayout"
                     android:text="@string/Score_A"/>
 
                 <!-- Image for Team A "Dead Warriors" -->
@@ -88,8 +70,7 @@
                 <!-- Score button for Team B -->
                 <TextView
                     android:id="@+id/scoreBoard_B"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    style="@style/textViewLayout"
                     android:text="@string/Score_B" />
             </LinearLayout>
         </LinearLayout>
@@ -134,11 +115,7 @@
         <!-- Common Score Increase and decrease buttons for the both Teams that can be switched between teams using switch button  -->
         <LinearLayout
             android:id="@+id/linearLayout8"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:background="@color/tab_blue"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            style="@style/linearLayout8">
 
             <!-- Score increase button -->
             <Button
@@ -160,4 +137,4 @@
         </LinearLayout>
     </LinearLayout>
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

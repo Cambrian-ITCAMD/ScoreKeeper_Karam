@@ -14,4 +14,5 @@
     <string name="Zero">Off</string>
     <string name="Team_A_description">Represents the Symbol for Team A</string>
     <string name="Team_B_description">Represents the Symbol for Team B</string>
+    <string name="compare">v/s</string>
 </resources>

@@ -14,4 +14,9 @@
     <color name="night_back">#554D56</color>
     <color name="night_text">#419BF9</color>
     <color name="night_tab">#979197</color>
+    <color name="primary_night">#212434</color>
+    <color name="secondary_night">#3F446F</color>
+    <color name="tertiary_night">#FFD082</color>
+    <color name="silver_night">#BBBBBB</color>
+    <color name="alto_night">#D7D7D7</color>
 </resources>
