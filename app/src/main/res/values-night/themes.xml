@@ -19,6 +19,7 @@
         <item name="android:switchStyle">@style/switchStyle</item>
     </style>
 
+    <!--style/theme for the parent layout(ScrollView)-->
     <style name="parentLayout">
         <item name="android:background">@color/alto_night</item>
         <item name="android:layout_width">match_parent</item>
@@ -26,6 +27,7 @@
         <item name="android:orientation">vertical</item>
     </style>
 
+    <!--style for the linear layout used as background for other palette-->
     <style name="mainFrame">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
@@ -36,6 +38,7 @@
         <item name="android:layout_margin">8dp</item>
     </style>
 
+    <!-- theme for the editText palette-->
     <style name="editText">
         <item name="android:background">@color/primary_night</item>
         <item name="android:editTextColor">@color/tertiary_night</item>
@@ -47,6 +50,7 @@
         <item name="android:layout_height">match_parent</item>
     </style>
 
+    <!--theme for the textView palette-->
     <style name="textViewTheme">
         <item name="android:layout_margin">10dp</item>
         <item name="android:textColor">@color/tertiary_night</item>
@@ -55,6 +59,7 @@
         <item name="android:gravity">center</item>
     </style>
 
+    <!--style for the radioButton/options used in the app-->
     <style name="radioStyle">
         <item name="android:textSize">30sp</item>
         <item name="android:textColor">@color/tertiary_night</item>
@@ -63,6 +68,7 @@
         <item name="android:layout_gravity">center</item>
     </style>
 
+    <!--style for the increase and decrease button used in the app layout-->
     <style name="Button.Seed" parent="ThemeOverlay.AppCompat">
         <item name="backgroundTint">@color/tertiary_night</item>
         <item name="android:textStyle">bold</item>
@@ -74,12 +80,14 @@
         <item name="android:clickable">true</item>
     </style>
 
+    <!--style for the images used as team symbols in the app layout-->
     <style name="images">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">104dp</item>
         <item name="android:layout_weight">1</item>
     </style>
 
+    <!--theme for inner linear layout palette used for the team names and logos-->
     <style name="layoutStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -89,6 +97,7 @@
         <item name="android:layout_gravity">center</item>
     </style>
 
+    <!--style/theme for the switch used in app layout-->
     <style name="switchStyle">
         <item name="android:textSize">11sp</item>
         <item name="android:textColor">@color/tertiary_night</item>
@@ -100,6 +109,7 @@
         <item name="android:layout_gravity">center</item>
     </style>
 
+    <!--theme for inner linear layout palette used for the team names and logos-->
     <style name="innerLayout">
         <item name="android:background">@color/silver_night</item>
         <item name="android:layout_height">wrap_content</item>
@@ -108,6 +118,7 @@
         <item name="android:orientation">vertical</item>
     </style>
 
+    <!--style for the textView used for versus text-->
     <style name="versusTab">
         <item name="android:textSize">25sp</item>
         <item name="android:background">@color/primary_night</item>
@@ -115,6 +126,7 @@
         <item name="android:layout_width">60dp</item>
     </style>
 
+    <!--theme for linear layout used for the team names-->
     <style name="linearLayout1">
         <item name="android:background">@color/white</item>
         <item name="android:layout_width">wrap_content</item>
@@ -124,6 +136,7 @@
         <item name="android:orientation">horizontal</item>
     </style>
 
+    <!--style for linear layout used for team scores and images-->
     <style name="linearLayout3">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
@@ -133,6 +146,7 @@
         <item name="android:background">@color/primary_night</item>
     </style>
 
+    <!--theme for linear layout used for increase/decrease button and switch-->
     <style name="linearLayout8">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
