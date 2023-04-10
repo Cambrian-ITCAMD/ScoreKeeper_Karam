@@ -3,6 +3,8 @@ package ca.skaram.scorekeeper
 
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.CompoundButton
@@ -54,6 +56,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
 
         //Sets the click listener for the decrease button
         decButton.setOnClickListener(this)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.options, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        Log.d("ItemTitle", item.title.toString())
+
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onClick(v: View?) {

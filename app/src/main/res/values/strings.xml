@@ -15,4 +15,6 @@
     <string name="Team_A_description">Represents the Symbol for Team A</string>
     <string name="Team_B_description">Represents the Symbol for Team B</string>
     <string name="compare">v/s</string>
+    <string name="about">About</string>
+    <string name="settings">Settings</string>
 </resources>

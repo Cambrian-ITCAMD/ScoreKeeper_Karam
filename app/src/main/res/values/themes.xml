@@ -11,8 +11,11 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+
+
+        <!--Presented By: Karam Singh (A00242034)-->
+
         <!-- Customize your theme here. -->
-        <item name="android:textViewStyle">@style/textViewTheme</item>
         <item name="editTextStyle">@style/editText</item>
         <item name="android:radioButtonStyle">@style/radioStyle</item>
         <item name="android:layout_gravity">top</item>
@@ -124,6 +127,7 @@
         <item name="android:textColor">@color/light_seed</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">60dp</item>
+        <item name="android:gravity">center</item>
     </style>
 
     <!--style for linear layout used for team scores and images-->
@@ -149,6 +153,11 @@
     <style name="textViewLayout">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">50sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
     </style>
 
     <!--theme for linear layout used for increase/decrease button and switch-->

@@ -5,6 +5,10 @@
     style="@style/parentLayout"
     tools:context=".MainActivity">
 
+    <!--
+        * Presented By: Karam Singh (A00242034)
+        * Group work By: Rishabh Bhutani & Karam Singh
+    -->
     <LinearLayout
         style="@style/mainFrame">
 
@@ -14,7 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="77dp"
             android:textSize="40sp"
-            android:text="@string/Score_Keeper"/>
+            android:text="@string/Score_Keeper"
+            style="@style/textViewTheme"/>
 
         <LinearLayout
             style="@style/innerLayout">
@@ -44,6 +49,8 @@
 
             <!-- Image views for two different teams in the Linear Layout -->
             <LinearLayout
+
+                android:elevation="100dp"
                 android:id="@+id/linearLayout3"
                 style="@style/linearLayout3">
 

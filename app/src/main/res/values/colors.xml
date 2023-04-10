@@ -6,9 +6,9 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="back_blue">#03045E</color>
-    <color name="tab_blue">#00B4D8</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--Additional colors-->
     <color name="seed">#007bc8</color>
     <color name="light_seed">#235CB1</color>
     <color name="night_back">#554D56</color>
@@ -19,4 +19,6 @@
     <color name="tertiary_night">#FFD082</color>
     <color name="silver_night">#BBBBBB</color>
     <color name="alto_night">#D7D7D7</color>
+    <color name="back_blue">#03045E</color>
+    <color name="tab_blue">#00B4D8</color>
 </resources>
