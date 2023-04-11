@@ -64,8 +64,24 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        Log.d("ItemTitle", item.title.toString())
-
+        when (item.itemId) {
+            R.id.settings -> {
+                // Call the function named "savedata" when the "settings" item is clicked
+                Log.d("ItemID", item.itemId.toString())
+                return true
+            }
+            R.id.about -> {
+                // Print the name and course when the "about" item is clicked
+                val names = listOf("Rishabh Bhutani", "Aneri Patel", "Karam Singh")
+                val studentIds = listOf("A00244270", "A00244887", "A00242034")
+                val message = StringBuilder()
+                for (i in names.indices) {
+                    message.append("Name: ${names[i]} \nStudent ID: ${studentIds[i]} \nCourse: IOT1009\n\n")
+                }
+                Toast.makeText(this, "Created By:\n\n"+ message.toString().trim(), Toast.LENGTH_SHORT).show()
+                return true
+            }
+        }
         return super.onOptionsItemSelected(item)
     }
 
