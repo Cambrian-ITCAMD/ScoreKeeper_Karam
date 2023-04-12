@@ -12,9 +12,6 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
 
-
-        <!--Presented By: Karam Singh (A00242034)-->
-
         <!-- Customize your theme here. -->
         <item name="editTextStyle">@style/editText</item>
         <item name="android:radioButtonStyle">@style/radioStyle</item>

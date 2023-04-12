@@ -1,6 +1,7 @@
 
 package ca.skaram.scorekeeper
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -65,12 +66,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.settings -> {
+            R.id.menuSettings -> {
                 // Call the function named "savedata" when the "settings" item is clicked
+                val intent = Intent(this, SettingsActivity::class.java)
+                startActivity(intent)
                 Log.d("ItemID", item.itemId.toString())
                 return true
             }
-            R.id.about -> {
+            R.id.menuAbout -> {
                 // Print the name and course when the "about" item is clicked
                 val names = listOf("Rishabh Bhutani", "Aneri Patel", "Karam Singh")
                 val studentIds = listOf("A00244270", "A00244887", "A00242034")

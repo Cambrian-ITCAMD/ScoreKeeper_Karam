@@ -5,10 +5,6 @@
     style="@style/parentLayout"
     tools:context=".MainActivity">
 
-    <!--
-        * Presented By: Karam Singh (A00242034)
-        * Group work By: Rishabh Bhutani & Karam Singh
-    -->
     <LinearLayout
         style="@style/mainFrame">
 
