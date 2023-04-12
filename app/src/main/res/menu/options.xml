@@ -5,13 +5,30 @@
     <item
         android:id="@+id/menuSettings"
         android:title="@string/settings"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
         android:iconTint="@color/white"
         android:icon="@drawable/baseline_settings_24" />
+    <item
+        android:id="@+id/menuShare"
+        android:title="@string/share"
+        android:icon="@drawable/baseline_share_24"
+        app:showAsAction="always"
+        android:iconTint="@color/white"/>
     <item
         android:id="@+id/menuAbout"
         android:title="@string/about"
         android:icon="@drawable/baseline_info_24"
         app:showAsAction="ifRoom"
+        android:iconTint="@color/white"/>
+    <item
+        android:id="@+id/menuPrint"
+        android:title="@string/print"
+        android:icon="@drawable/baseline_print_24"
+        android:iconTint="@color/white"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/menuReset"
+        android:title="@string/reset"
+        app:showAsAction="never"
         android:iconTint="@color/white"/>
 </menu>

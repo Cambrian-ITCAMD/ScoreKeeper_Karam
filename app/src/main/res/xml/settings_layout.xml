@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <SwitchPreference
         android:defaultValue="true"
-        android:iconSpaceReserved="true"
         android:key="switch_preference_1"
-        android:title="Sava Data"
-        android:checked="true"
-        android:summary="Store data when the user exit the app."/>
+        android:summary="Store data when the user exit the app."
+        android:title="Sava Data"/>
     <ListPreference
         android:defaultValue="1"
         android:entries="@array/default_entries"

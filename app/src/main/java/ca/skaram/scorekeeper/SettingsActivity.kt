@@ -3,6 +3,7 @@ package ca.skaram.scorekeeper
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.SwitchPreference
 
 class SettingsActivity : AppCompatActivity() {
 

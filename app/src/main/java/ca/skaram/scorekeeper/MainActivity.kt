@@ -2,6 +2,7 @@
 package ca.skaram.scorekeeper
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -9,9 +10,11 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.CompoundButton
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.PreferenceManager
 import ca.skaram.scorekeeper.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener,
@@ -21,6 +24,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
     private lateinit var binding: ActivityMainBinding
     private lateinit var pointsTeamA: TextView
     private lateinit var pointsTeamB: TextView
+    private lateinit var teamAName: EditText
+    private lateinit var teamBName: EditText
+    private lateinit var sharedPrefers: SharedPreferences
 
     //private variables that represents the points of the teams
     private var teamAPoints = 0
@@ -35,6 +41,29 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
         //create object of the binding
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        var radioCheckedId = binding.rg1.checkedRadioButtonId
+        var switchChecked = binding.switch1.isChecked
+
+        sharedPrefers = PreferenceManager.getDefaultSharedPreferences(this)
+        teamAName = binding.teamA
+        teamBName = binding.teamB
+
+        // Initialize the points of each team from SharedPreferences
+        teamAPoints = sharedPrefers.getInt("teamAPoints", teamAPoints)
+        teamBPoints = sharedPrefers.getInt("teamBPoints", teamBPoints)
+        teamAName.setText(sharedPrefers.getString("teamAName", ""))
+        teamBName.setText(sharedPrefers.getString("teamBName", ""))
+        radioCheckedId = sharedPrefers.getInt("radioCheckedId", radioCheckedId)
+        when (radioCheckedId) {
+            R.id.radioButton1 -> binding.radioButton1.isChecked = true
+            R.id.radioButton2 -> binding.radioButton2.isChecked = true
+            R.id.radioButton3 -> binding.radioButton3.isChecked = true
+        }
+
+        // Restore saved data for switch button selection
+        switchChecked = sharedPrefers.getBoolean("switchChecked", switchChecked)
+        binding.switch1.isChecked = switchChecked
 
         //Assign variable to the increase button using the id of the button
         val incButton = findViewById<Button>(R.id.inc_button)
@@ -51,17 +80,66 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
         binding.radioButton2.setOnClickListener(this)
         binding.radioButton3.setOnClickListener(this)
         binding.switch1.setOnCheckedChangeListener(this)
+        binding.teamA.setOnClickListener(this)
+        binding.teamB.setOnClickListener(this)
 
         //Sets the click listener for the increase button
         incButton.setOnClickListener(this)
 
         //Sets the click listener for the decrease button
         decButton.setOnClickListener(this)
+
+        // Update the scoreboards with restored points
+        pointsTeamA.text = teamAPoints.toString()
+        pointsTeamB.text = teamBPoints.toString()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.options, menu)
         return true
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        val editor = sharedPrefers.edit()
+        val isSavingEnabled = sharedPrefers.getBoolean("switch_preference_1", false)
+
+        if(isSavingEnabled){
+
+            // Save the points of each team
+            editor.putInt("teamAPoints", teamAPoints)
+            editor.putInt("teamBPoints", teamBPoints)
+
+            // save the team name, radio pointer, and switch button state
+            editor.putString("teamAName", teamAName.text.toString())
+            editor.putString("teamBName", teamBName.text.toString())
+            editor.putInt("radioButtonSelectedId", binding.rg1.checkedRadioButtonId)
+            editor.putBoolean("switchChecked", binding.switch1.isChecked)
+        }
+        else{
+            editor.clear()
+        }
+        // Apply the changes
+        editor.apply()
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        // Retrieve the stored values from the SharedPreferences
+        teamAPoints = sharedPrefers.getInt("teamAPoints", teamAPoints)
+        teamBPoints = sharedPrefers.getInt("teamBPoints", teamBPoints)
+        binding.radioButton1.isChecked = sharedPrefers.getBoolean("radioButton1", false)
+        binding.radioButton2.isChecked = sharedPrefers.getBoolean("radioButton2", false)
+        binding.radioButton3.isChecked = sharedPrefers.getBoolean("radioButton3", false)
+        binding.switch1.isChecked = sharedPrefers.getBoolean("switch1", false)
+        teamAName.setText(sharedPrefers.getString("teamAName", ""))
+        teamBName.setText(sharedPrefers.getString("teamBName", ""))
+
+        // Update the UI with the retrieved values
+        pointsTeamA.text = teamAPoints.toString()
+        pointsTeamB.text = teamBPoints.toString()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -70,7 +148,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
                 // Call the function named "savedata" when the "settings" item is clicked
                 val intent = Intent(this, SettingsActivity::class.java)
                 startActivity(intent)
-                Log.d("ItemID", item.itemId.toString())
                 return true
             }
             R.id.menuAbout -> {
@@ -188,6 +265,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
             Log.i("onClick", "Points can't be negative")
         }
     }
+
 
     /**
      * Called when the checked state of a compound button has changed.
