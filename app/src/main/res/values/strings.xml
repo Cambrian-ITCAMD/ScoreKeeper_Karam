@@ -21,4 +21,6 @@
     <string name="share">Share</string>
     <string name="reset">Reset</string>
     <string name="print">Print</string>
+    <string name="switch_prefers">Save Data</string>
+    <string name="list_prefers">Gives choice for initial/starting scores.</string>
 </resources>

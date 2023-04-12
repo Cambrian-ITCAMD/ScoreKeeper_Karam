@@ -6,12 +6,5 @@
         android:defaultValue="true"
         android:key="switch_preference_1"
         android:summary="Store data when the user exit the app."
-        android:title="Sava Data"/>
-    <ListPreference
-        android:defaultValue="1"
-        android:entries="@array/default_entries"
-        android:entryValues="@array/default_values"
-        android:key="list_preference_1"
-        android:title="Score preference"
-        android:summary="Gives choice for initial/starting scores."/>
+        android:title="@string/switch_prefers"/>
 </PreferenceScreen>
