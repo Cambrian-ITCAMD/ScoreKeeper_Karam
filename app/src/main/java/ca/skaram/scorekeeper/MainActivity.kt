@@ -35,6 +35,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
     private var maxPoints = 100
     private var minPoints = 0
 
+    private var radioCheckedId = -1 // variable to store ID of the checked radio button
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -54,12 +57,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
         teamBPoints = sharedPrefers.getInt("teamBPoints", teamBPoints)
         teamAName.setText(sharedPrefers.getString("teamAName", ""))
         teamBName.setText(sharedPrefers.getString("teamBName", ""))
-        radioCheckedId = sharedPrefers.getInt("radioCheckedId", radioCheckedId)
-        when (radioCheckedId) {
-            R.id.radioButton1 -> binding.radioButton1.isChecked = true
-            R.id.radioButton2 -> binding.radioButton2.isChecked = true
-            R.id.radioButton3 -> binding.radioButton3.isChecked = true
-        }
+        radioCheckedId = sharedPrefers.getInt("radioCheckedId", binding.rg1.checkedRadioButtonId)
 
         // Restore saved data for switch button selection
         switchChecked = sharedPrefers.getBoolean("switchChecked", switchChecked)
@@ -114,8 +112,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
             // save the team name, radio pointer, and switch button state
             editor.putString("teamAName", teamAName.text.toString())
             editor.putString("teamBName", teamBName.text.toString())
-            editor.putInt("radioButtonSelectedId", binding.rg1.checkedRadioButtonId)
-            editor.putBoolean("switchChecked", binding.switch1.isChecked)
+            editor.putBoolean("switch1", binding.switch1.isChecked)
+
+            // save the ID of the checked radio button
+            if (binding.radioButton1.isChecked) {
+                radioCheckedId = binding.radioButton1.id
+            } else if (binding.radioButton2.isChecked) {
+                radioCheckedId = binding.radioButton2.id
+            } else if (binding.radioButton3.isChecked) {
+                radioCheckedId = binding.radioButton3.id
+            }
+            if (radioCheckedId != -1) { // save only if at least one radio button is checked
+                editor.putInt("radioCheckedId", radioCheckedId)
+            }
         }
         else{
             editor.clear()
@@ -130,12 +139,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
         // Retrieve the stored values from the SharedPreferences
         teamAPoints = sharedPrefers.getInt("teamAPoints", teamAPoints)
         teamBPoints = sharedPrefers.getInt("teamBPoints", teamBPoints)
-        binding.radioButton1.isChecked = sharedPrefers.getBoolean("radioButton1", false)
-        binding.radioButton2.isChecked = sharedPrefers.getBoolean("radioButton2", false)
-        binding.radioButton3.isChecked = sharedPrefers.getBoolean("radioButton3", false)
         binding.switch1.isChecked = sharedPrefers.getBoolean("switch1", false)
         teamAName.setText(sharedPrefers.getString("teamAName", ""))
         teamBName.setText(sharedPrefers.getString("teamBName", ""))
+
+        // Restore saved data for radio buttons
+        radioCheckedId = sharedPrefers.getInt("radioCheckedId", -1)
+        if (radioCheckedId != -1) { // restore only if at least one radio button was checked
+            binding.radioButton1.isChecked = (binding.radioButton1.id == radioCheckedId)
+            binding.radioButton2.isChecked = (binding.radioButton2.id == radioCheckedId)
+            binding.radioButton3.isChecked = (binding.radioButton3.id == radioCheckedId)
+        }
 
         // Update the UI with the retrieved values
         pointsTeamA.text = teamAPoints.toString()
